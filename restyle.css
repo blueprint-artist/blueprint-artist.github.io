@@ -1,0 +1,129 @@
+/* ========portfolio======= */
+
+/* main layout using grid */
+.portfolio-layout{
+    min-width: 95vw;
+    padding: 0px 25px 0px 25px;
+}
+
+.portfolio-grid-layout{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 20px 20px;
+}
+
+.portfolio-card{
+    min-width: 100px;
+    min-height: 150px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(129, 129, 129, 0.8);
+    position: relative;
+    overflow: hidden;
+}
+
+/* end main layout using grid */
+
+
+
+/* end border around text section */
+
+/* image property section */
+
+.portfolio-image{
+    width: 45vw;
+    height: 600px;
+    overflow: hidden;
+}
+
+.portfolio-image-src-portrait{
+    height: 100%;
+    width: auto;
+}
+
+.portfolio-image-src-landscape{
+    width:100% ;
+    height: auto;
+}
+
+.align-middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* end image property section */
+
+/* portfolio content section */
+.portfolio-content{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    padding: 20px;
+    box-sizing: border-box;
+    
+}
+
+.portfolio-content p{
+    margin: 0 0 10px;
+    padding: 0;
+    font-family: monospace;
+    color: #fff;
+    transition: 0.5s;
+    transform: translateY(50px);
+    opacity:0;
+    visibility: hidden;
+}
+
+
+
+.portfolio-content h2{
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff;
+    transition: 0.5s;
+    transform: translateY(-50px);
+    opacity:0;
+    visibility: hidden;
+}
+
+
+
+/* end portfolio content section */
+
+/* viewport of ipad */
+
+@media screen and (max-width:769px){
+    .portfolio-grid-layout{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px 10px;
+    }
+    .portfolio-image{
+        width: 95vw;
+        height: 200px;
+        overflow: hidden;
+    }
+}
+
+/* viewport of smartphone */
+@media screen and (max-width:500px){
+    .portfolio-grid-layout{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px 10px;
+    }
+    .portfolio-image{
+        width: 95vw;
+        height: 250px;
+        overflow: hidden;
+    }
+}
+
+/* ========END of portfolio======= */
